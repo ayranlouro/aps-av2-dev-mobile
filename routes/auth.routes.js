@@ -8,7 +8,7 @@ import Login from '../pages/Login';
 
 const AuthRoutes = () =>{
     return (
-        <Auth.Navigator screenOptions={{HeaderShown:false}}>
+        <Auth.Navigator screenOptions={{headerShown:false}}>
             <Auth.Screen name="Login screen" component={Login}/>
         </Auth.Navigator>
     )

@@ -9,7 +9,12 @@ const Tab = createBottomTabNavigator();
 
 const AppRoutes = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            tabBarOptions={{
+                activeTintColor: 'tomato',
+                inactiveTintColor: '#ccc',
+            }}
+        >
             <Tab.Screen name="Grupos" component={Chat} options={{tabBarIcon: ({color}) => (<MaterialCommunityIcons name="chat" color={color} size={32}/>)}}></Tab.Screen>
             <Tab.Screen name="Configurações" component={Settings} options={{tabBarIcon: ({color}) => (<MaterialCommunityIcons name="robot" color={color} size={32}/>)}}></Tab.Screen>
         </Tab.Navigator>

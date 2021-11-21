@@ -1,12 +1,22 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useContext, useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
-const Settings = () =>{
-    return (
-        <View>
-            <Text>Settings</Text>
-        </View>
-    )
-}
+import { UsuarioContext } from "../../contexts/user";
+
+const Settings = () => {
+  const { signOut } = useContext(UsuarioContext);
+
+  return (
+    <View>
+      <TouchableOpacity
+        onPress={() => {
+          signOut();
+        }}
+      >
+        <Text>Settings</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 export default Settings;

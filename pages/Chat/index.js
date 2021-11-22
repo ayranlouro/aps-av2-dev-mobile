@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+
+import { Container, Button, ButtonText, Message } from "./styles";
 
 import firebaseApp from "../../services/firebase";
 import {
@@ -50,19 +51,19 @@ const Chat = () => {
   }
 
   return (
-    <View>
-      <TouchableOpacity
+    <Container>
+      <Button
         onPress={() => {
           handleMessage();
         }}
       >
-        <Text>Enviar</Text>
+        <ButtonText>Enviar Mensagem</ButtonText>
 
-      </TouchableOpacity>
+      </Button>
       {messages.map((item) => {
-        <Text key={item.id}>{item.id}</Text>;
+        <Message key={item.id}>{item.id}</Message>;
       })}
-    </View>
+    </Container>
   );
 };
 

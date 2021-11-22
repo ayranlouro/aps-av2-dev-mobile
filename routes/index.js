@@ -8,7 +8,7 @@ import AuthRoutes from './auth.routes';
 
 
 const Routes = () =>{
-    const user = useContext(UsuarioContext);
+    const { user } = useContext(UsuarioContext);
     return (
         <NavigationContainer>
             {user ? <AppRoutes/> : <AuthRoutes/>}
